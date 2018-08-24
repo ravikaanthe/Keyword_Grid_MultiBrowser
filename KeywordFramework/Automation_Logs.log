@@ -1,0 +1,65 @@
+2018-08-22 00:32:43,777 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:32:43,777 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:32:43,777 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Navigate_01       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2018-08-22 00:32:43,777 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:32:43,777 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:32:43,777 INFO  [Log] Opening Browser 
+2018-08-22 00:32:53,880 INFO  [Log] Mozilla browser started 
+2018-08-22 00:32:54,081 INFO  [Log] Navigating to URL 
+2018-08-22 00:33:03,395 INFO  [Log] Wait for 5 seconds 
+2018-08-22 00:33:08,708 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2018-08-22 00:33:08,708 INFO  [Log] X 
+2018-08-22 00:33:08,708 INFO  [Log] X 
+2018-08-22 00:33:08,708 INFO  [Log] X 
+2018-08-22 00:33:08,708 INFO  [Log] X 
+2018-08-22 00:33:08,708 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:08,708 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:08,708 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Login_01       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2018-08-22 00:33:08,708 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:08,708 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:08,708 INFO  [Log] Entering the text in txtbx_UserName 
+2018-08-22 00:33:10,365 INFO  [Log] Entering the text in txtbx_Password 
+2018-08-22 00:33:10,590 INFO  [Log] Clicking on Webelement btn_LogIn 
+2018-08-22 00:33:17,549 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2018-08-22 00:33:17,549 INFO  [Log] X 
+2018-08-22 00:33:17,549 INFO  [Log] X 
+2018-08-22 00:33:17,549 INFO  [Log] X 
+2018-08-22 00:33:17,549 INFO  [Log] X 
+2018-08-22 00:33:17,550 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:17,550 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:17,550 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Contacts_01       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2018-08-22 00:33:17,550 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:17,550 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:17,550 INFO  [Log] Wait for 5 seconds 
+2018-08-22 00:33:29,937 INFO  [Log] Moved over to 'lnk_contact' 
+2018-08-22 00:33:30,194 INFO  [Log] Clicking on Webelement lnk_newContact 
+2018-08-22 00:33:32,522 INFO  [Log] Entering the text in txtbx_FirstName 
+2018-08-22 00:33:32,600 INFO  [Log] Entering the text in txtbx_LastName 
+2018-08-22 00:33:32,700 INFO  [Log] Clicking on Webelement btn_Save 
+2018-08-22 00:33:33,086 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2018-08-22 00:33:33,086 INFO  [Log] X 
+2018-08-22 00:33:33,086 INFO  [Log] X 
+2018-08-22 00:33:33,086 INFO  [Log] X 
+2018-08-22 00:33:33,086 INFO  [Log] X 
+2018-08-22 00:33:33,086 ERROR [Log] Class Utils | Method getCellData | Exception desc : null 
+2018-08-22 00:33:33,086 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:33,086 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:33,086 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Search Contacts_01       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2018-08-22 00:33:33,086 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:33,086 INFO  [Log] **************************************************************************************** 
+2018-08-22 00:33:33,101 INFO  [Log] Clicking on Webelement lnk_contact 
+2018-08-22 00:33:34,290 ERROR [Log] Not able to click --- Browsing context has been discarded
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'LAPTOP-Q35KUDM9', ip: '192.168.0.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 15064, moz:profile: C:\Users\ravik\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: d70ae2a2-fbab-48ca-9b88-dc4e6ebb467d
+*** Element info: {Using=xpath, value=//a[contains(text(),'Contacts')]} 
+2018-08-22 00:33:34,347 INFO  [Log] Closing the browser--  
+2018-08-22 00:33:37,802 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2018-08-22 00:33:37,802 INFO  [Log] X 
+2018-08-22 00:33:37,802 INFO  [Log] X 
+2018-08-22 00:33:37,802 INFO  [Log] X 
+2018-08-22 00:33:37,802 INFO  [Log] X 
+2018-08-22 00:33:37,802 ERROR [Log] Class Utils | Method getCellData | Exception desc : null 
+2018-08-22 00:33:37,802 ERROR [Log] Class Utils | Method getCellData | Exception desc : null 

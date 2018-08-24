@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Grid">
+
+	<test name="Test Node1 chrome">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="executionEngine.DriverScriptTest">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test Node2 firecof">
+		<parameter name="browser" value="firefox"/>
+		<classes>
+			<class name="executionEngine.DriverScriptTest">
+			</class>
+		</classes>
+	</test>
+
+
+</suite> <!-- Suite -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test Grid]">
+  <test thread-count="5" name="Test Node1 chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="executionEngine.DriverScriptTest">
+        <methods>
+          <include name="Intitialize" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- executionEngine.DriverScriptTest -->
+    </classes>
+  </test> <!-- Test Node1 chrome(failed) -->
+  <test thread-count="5" name="Test Node2 firecof(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="executionEngine.DriverScriptTest">
+        <methods>
+          <include name="Intitialize" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- executionEngine.DriverScriptTest -->
+    </classes>
+  </test> <!-- Test Node2 firecof(failed) -->
+</suite> <!-- Failed suite [Test Grid] -->

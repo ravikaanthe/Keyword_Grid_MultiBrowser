@@ -1,0 +1,16 @@
+# Home Page Objects
+#btn_MyAccount=.//*[@id='account']
+b#tn_LogOut=.//*[@id='account_logout']
+
+# Login Page Object
+#txtbx_UserName=.//*[@id='log']
+#txtbx_Password=.//*[@id='pwd']
+#btn_LogIn=.//*[@id='login']
+
+# Login Page Objects
+txtbx_UserName=/html/body/div[2]/div/div[3]/form/div/input[1]
+txtbx_Password=/html/body/div[2]/div/div[3]/form/div/input[2]
+btn_LogIn=/html/body/div[2]/div/div[3]/form/div/div/input
+lbl_userTitle=/html/body/div/div/div/div/div[2]/div[1]/section[1]/div
+lnk_contacts=.//a[contains(text(),'Contacts')]
+lnk_newContact=.//a[contains(text(),'New Contact')]

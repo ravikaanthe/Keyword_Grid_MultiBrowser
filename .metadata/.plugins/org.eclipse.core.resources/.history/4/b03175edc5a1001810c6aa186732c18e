@@ -1,0 +1,19 @@
+# Home Page Objects
+#btn_MyAccount=.//*[@id='account']
+b#tn_LogOut=.//*[@id='account_logout']
+
+# Login Page Object
+#txtbx_UserName=.//*[@id='log']
+#txtbx_Password=.//*[@id='pwd']
+#btn_LogIn=.//*[@id='login']
+
+# Home Page Objects
+btn_MyAccount=.//*[@id='li_myaccount']
+btn_LogIn=/html/body/nav/div/div[2]/ul[2]/ul/li[1]/ul/li[1]/a
+btn_RaviAccount=/html/body/nav/div/div[2]/ul[2]/ul/li[1]/a
+btn_LogOut=/html/body/nav/div/div[2]/ul[2]/ul/li[1]/ul/li[2]/a
+
+# Login Page Object
+txtbx_UserName=.//*[@name='username']
+txtbx_Password=.//*[@id='password']
+btn_LogIn=.//*[@type='submit']
