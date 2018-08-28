@@ -2,12 +2,12 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.selenium.keyword"/>
+			<item value="com.selenium.datadriven"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="KeywordFramework"/>
+			<item value="DatadrivenFramework"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -58,6 +58,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\ravik\MyGitRepo_Frameworks\KeywordFramework"/>
+			<item value="C:\Users\ravik\MyGitRepo_Frameworks\KeywordFramework\pom.xml"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
