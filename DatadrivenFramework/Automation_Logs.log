@@ -1,22 +1,22 @@
-2018-08-27 22:12:47,126 INFO  [Log] **************************************************************************************** 
-2018-08-27 22:12:47,126 INFO  [Log] **************************************************************************************** 
-2018-08-27 22:12:47,126 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Selenium_Test_001       $$$$$$$$$$$$$$$$$$$$$$$$$ 
-2018-08-27 22:12:47,128 INFO  [Log] **************************************************************************************** 
-2018-08-27 22:12:47,128 INFO  [Log] **************************************************************************************** 
-2018-08-27 22:12:47,617 INFO  [Log]  Excel sheet opened 
-2018-08-27 22:12:53,761 INFO  [Log] New driver instantiated 
-2018-08-27 22:12:59,947 INFO  [Log] Web application launched 
-2018-08-27 22:13:04,969 INFO  [Log] Username picked from Excel is selframework 
-2018-08-27 22:13:04,972 INFO  [Log] Password picked from Excel is klsrcm 
-2018-08-27 22:13:05,012 INFO  [Log] Username text box found 
-2018-08-27 22:13:05,258 INFO  [Log] Username entered in the Username text box 
-2018-08-27 22:13:05,307 INFO  [Log] Password text box found 
-2018-08-27 22:13:05,359 INFO  [Log] Password entered in the Password text box 
-2018-08-27 22:13:10,385 INFO  [Log] Login button found 
-2018-08-27 22:13:15,627 INFO  [Log] Click action performed on Login button 
-2018-08-27 22:13:18,705 INFO  [Log] Contact link element found 
-2018-08-27 22:13:18,851 INFO  [Log] Move Over action is performed on contact link 
-2018-08-27 22:13:18,874 INFO  [Log] New Contact link element found 
-2018-08-27 22:13:20,276 INFO  [Log] Click action is performed on new contact link 
-2018-08-27 22:13:20,296 INFO  [Log] Logout link element found 
-2018-08-27 22:13:20,879 INFO  [Log] Click action is performed on Log Out link 
+2018-09-01 09:12:06,545 INFO  [Log] **************************************************************************************** 
+2018-09-01 09:12:06,545 INFO  [Log] **************************************************************************************** 
+2018-09-01 09:12:06,545 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Selenium_Test_001       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2018-09-01 09:12:06,545 INFO  [Log] **************************************************************************************** 
+2018-09-01 09:12:06,545 INFO  [Log] **************************************************************************************** 
+2018-09-01 09:12:07,103 INFO  [Log]  Excel sheet opened 
+2018-09-01 09:12:13,288 INFO  [Log] New driver instantiated 
+2018-09-01 09:12:26,303 INFO  [Log] Web application launched 
+2018-09-01 09:12:31,334 INFO  [Log] Username picked from Excel is selframework 
+2018-09-01 09:12:31,334 INFO  [Log] Password picked from Excel is klsrcm 
+2018-09-01 09:12:31,368 INFO  [Log] Username text box found 
+2018-09-01 09:12:31,488 INFO  [Log] Username entered in the Username text box 
+2018-09-01 09:12:31,501 INFO  [Log] Password text box found 
+2018-09-01 09:12:31,547 INFO  [Log] Password entered in the Password text box 
+2018-09-01 09:12:36,584 INFO  [Log] Login button found 
+2018-09-01 09:12:46,246 INFO  [Log] Click action performed on Login button 
+2018-09-01 09:12:49,309 INFO  [Log] Contact link element found 
+2018-09-01 09:12:49,463 INFO  [Log] Move Over action is performed on contact link 
+2018-09-01 09:12:49,487 INFO  [Log] New Contact link element found 
+2018-09-01 09:12:51,798 INFO  [Log] Click action is performed on new contact link 
+2018-09-01 09:12:51,810 INFO  [Log] Logout link element found 
+2018-09-01 09:12:52,554 INFO  [Log] Click action is performed on Log Out link 

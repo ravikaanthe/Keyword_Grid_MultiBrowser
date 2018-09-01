@@ -10,6 +10,8 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import appModules.SignIn_Action;
@@ -19,13 +21,12 @@ public class Apache_POI_Test {
 	
 	private static WebDriver driver = null;
 	
-@Test
-	public static void Excute() throws Exception {
+	@BeforeMethod
 	
-		// Provide Log4j configuration settings
-	 
+	public void beforeMethod() throws Exception {
+		
 		DOMConfigurator.configure("log4j.xml");
-	 
+		 
 		Log.startTestCase("Selenium_Test_001");
 		
 		 //This is to open the Excel file. Excel path, file name and the sheet name are parameters to this method
@@ -40,6 +41,31 @@ public class Apache_POI_Test {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(Constants.URL);
         Log.info("Web application launched");
+		
+	}
+	
+	
+@Test
+	public void main() throws Exception {
+	
+		// Provide Log4j configuration settings
+	 
+//		DOMConfigurator.configure("log4j.xml");
+//	 
+//		Log.startTestCase("Selenium_Test_001");
+//		
+//		 //This is to open the Excel file. Excel path, file name and the sheet name are parameters to this method
+//		 
+//		ExcelUtils.setExcelFile(Constants.Path_TestData + Constants.File_TestData, "Sheet1");
+//		Log.info(" Excel sheet opened");
+//		
+//		System.setProperty("webdriver.gecko.driver", "C:\\Selenium Automation\\Software\\geckodriver-v0.21.0-win64\\geckodriver.exe");
+//		driver = new FirefoxDriver();	
+//		Log.info("New driver instantiated");
+//		
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        driver.get(Constants.URL);
+//        Log.info("Web application launched");
         
         Thread.sleep(5000);
         SignIn_Action.Execute(driver);
@@ -56,13 +82,19 @@ public class Apache_POI_Test {
         
         Home_Page.lnk_logOut(driver).click();
         Log.info("Click action is performed on Log Out link");
-        
-        driver.quit();
-        
         //This is to send the PASS value to the Excel sheet in the result column.
         
         ExcelUtils.setCellData("Pass", 1, 3);
 		
-	}
+}
+
+        @AfterMethod
+        
+        public void afterMethod() {
+       
+      	    driver.quit();
+       
+              }        
+        
 
 }
