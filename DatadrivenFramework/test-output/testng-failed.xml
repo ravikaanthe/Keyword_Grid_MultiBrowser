@@ -5,7 +5,9 @@
     <classes>
       <class name="datadrivenFramework.Apache_POI_Test">
         <methods>
-          <include name="Excute"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="main"/>
         </methods>
       </class> <!-- datadrivenFramework.Apache_POI_Test -->
     </classes>

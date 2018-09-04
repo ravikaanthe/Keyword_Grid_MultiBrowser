@@ -1,22 +1,37 @@
-2018-09-01 09:12:06,545 INFO  [Log] **************************************************************************************** 
-2018-09-01 09:12:06,545 INFO  [Log] **************************************************************************************** 
-2018-09-01 09:12:06,545 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Selenium_Test_001       $$$$$$$$$$$$$$$$$$$$$$$$$ 
-2018-09-01 09:12:06,545 INFO  [Log] **************************************************************************************** 
-2018-09-01 09:12:06,545 INFO  [Log] **************************************************************************************** 
-2018-09-01 09:12:07,103 INFO  [Log]  Excel sheet opened 
-2018-09-01 09:12:13,288 INFO  [Log] New driver instantiated 
-2018-09-01 09:12:26,303 INFO  [Log] Web application launched 
-2018-09-01 09:12:31,334 INFO  [Log] Username picked from Excel is selframework 
-2018-09-01 09:12:31,334 INFO  [Log] Password picked from Excel is klsrcm 
-2018-09-01 09:12:31,368 INFO  [Log] Username text box found 
-2018-09-01 09:12:31,488 INFO  [Log] Username entered in the Username text box 
-2018-09-01 09:12:31,501 INFO  [Log] Password text box found 
-2018-09-01 09:12:31,547 INFO  [Log] Password entered in the Password text box 
-2018-09-01 09:12:36,584 INFO  [Log] Login button found 
-2018-09-01 09:12:46,246 INFO  [Log] Click action performed on Login button 
-2018-09-01 09:12:49,309 INFO  [Log] Contact link element found 
-2018-09-01 09:12:49,463 INFO  [Log] Move Over action is performed on contact link 
-2018-09-01 09:12:49,487 INFO  [Log] New Contact link element found 
-2018-09-01 09:12:51,798 INFO  [Log] Click action is performed on new contact link 
-2018-09-01 09:12:51,810 INFO  [Log] Logout link element found 
-2018-09-01 09:12:52,554 INFO  [Log] Click action is performed on Log Out link 
+2018-09-03 19:29:10,218 INFO  [Log] **************************************************************************************** 
+2018-09-03 19:29:10,218 INFO  [Log] **************************************************************************************** 
+2018-09-03 19:29:10,218 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 Selenium_Test_001       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2018-09-03 19:29:10,218 INFO  [Log] **************************************************************************************** 
+2018-09-03 19:29:10,218 INFO  [Log] **************************************************************************************** 
+2018-09-03 19:29:10,686 INFO  [Log]  Excel sheet opened 
+2018-09-03 19:29:16,802 INFO  [Log] New driver instantiated 
+2018-09-03 19:29:23,142 INFO  [Log] Web application launched 
+2018-09-03 19:29:28,182 INFO  [Log] Username picked from Excel is selframework 
+2018-09-03 19:29:28,182 INFO  [Log] Password picked from Excel is klsrcm 
+2018-09-03 19:29:28,214 INFO  [Log] Username text box found 
+2018-09-03 19:29:28,261 INFO  [Log] Username entered in the Username text box 
+2018-09-03 19:29:28,307 INFO  [Log] Password text box found 
+2018-09-03 19:29:28,354 INFO  [Log] Password entered in the Password text box 
+2018-09-03 19:29:33,362 INFO  [Log] Login button found 
+2018-09-03 19:29:38,804 INFO  [Log] Click action performed on Login button 
+2018-09-03 19:29:41,984 INFO  [Log] Contact link element found 
+2018-09-03 19:29:42,118 INFO  [Log] Move Over action is performed on contact link 
+2018-09-03 19:29:42,138 INFO  [Log] New Contact link element found 
+2018-09-03 19:29:43,004 INFO  [Log] Click action is performed on new contact link 
+2018-09-03 19:29:46,004 INFO  [Log] First Name picked from Excel is Test User 
+2018-09-03 19:29:46,005 INFO  [Log] Last Name picked from Excel is Thomas 
+2018-09-03 19:29:46,033 INFO  [Log] First Name text box found 
+2018-09-03 19:29:46,062 INFO  [Log] Username entered in the Username text box 
+2018-09-03 19:29:46,073 INFO  [Log] Last Name text box found 
+2018-09-03 19:29:46,102 INFO  [Log] Password entered in the Password text box 
+2018-09-03 19:29:46,112 INFO  [Log] Save button found 
+2018-09-03 19:29:47,173 INFO  [Log] Click action performed on Save button to save new contact details 
+2018-09-03 19:29:50,194 INFO  [Log] Contact link element found 
+2018-09-03 19:29:51,069 INFO  [Log] Click action is performed on full search form link 
+2018-09-03 19:29:54,079 INFO  [Log] First Name picked from Excel is Test User 
+2018-09-03 19:29:54,095 INFO  [Log] First Name text box found 
+2018-09-03 19:29:54,142 INFO  [Log] Username entered in the Username text box 
+2018-09-03 19:29:54,157 INFO  [Log] SHow Full Form button found 
+2018-09-03 19:29:54,814 INFO  [Log] Click action performed on Search Contacts button to save new contact details 
+2018-09-03 19:29:54,845 INFO  [Log] Logout link element found 
+2018-09-03 19:29:55,401 INFO  [Log] Click action is performed on Log Out link 

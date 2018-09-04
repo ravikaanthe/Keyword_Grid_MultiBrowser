@@ -68,6 +68,27 @@ public class ExcelUtils {
 
 	}
 
+	//This method is to get the row count used of the excel sheet
+	public static int getRowCount(String SheetName){
+
+		int iNumber=0;
+
+		try {
+
+			ExcelWSheet = ExcelWBook.getSheet(SheetName);
+
+			iNumber=ExcelWSheet.getLastRowNum()+1;
+
+		} catch (Exception e){
+
+			Log.error("Class Utils | Method getRowCount | Exception desc : "+e.getMessage());
+
+			}
+
+		return iNumber;
+
+		}
+
 	// This method is to write in the Excel cell, Row num and Col num are the
 	// parameters
 

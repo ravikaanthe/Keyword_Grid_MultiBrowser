@@ -11,5 +11,9 @@ package utility;
       public static final String Path_TestData = "src/test/java/testData/";
 
       public static final String File_TestData = "TestData.xlsx";
+      
+      public static final int Col_TestCaseName = 0;
+      
+      public static final int Col_Browser = 6;
 
    }

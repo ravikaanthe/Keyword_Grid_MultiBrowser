@@ -9,11 +9,12 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import appModules.NewContact_Action;
+import appModules.SearchContacts_Action;
 import appModules.SignIn_Action;
 import pageObjects.Home_Page;
 
@@ -69,22 +70,24 @@ public class Apache_POI_Test {
         
         Thread.sleep(5000);
         SignIn_Action.Execute(driver);
+        System.out.println("Login Successfully, now it is the time to add new contact buddy!!");
+        NewContact_Action.Execute(driver);
+        System.out.println("New Contact has been added successfully, now its time to log off buddy!!");
+        SearchContacts_Action.Execute(driver);
         
-        System.out.println("Login Successfully, now it is the time to Log Off buddy.");
-        Thread.sleep(3000);
-        driver.switchTo().frame("mainpanel");
-		Actions action = new Actions(driver);
-		action.moveToElement(Home_Page.lnk_contact(driver)).build().perform();
-		Log.info("Move Over action is performed on contact link");
-		
-        Home_Page.lnk_newContact(driver).click();
-        Log.info("Click action is performed on new contact link");
+//        driver.switchTo().frame("mainpanel");
+//		Actions action = new Actions(driver);
+//		action.moveToElement(Home_Page.lnk_contact(driver)).build().perform();
+//		Log.info("Move Over action is performed on contact link");
+//		
+//        Home_Page.lnk_newContact(driver).click();
+//        Log.info("Click action is performed on new contact link");
         
         Home_Page.lnk_logOut(driver).click();
         Log.info("Click action is performed on Log Out link");
         //This is to send the PASS value to the Excel sheet in the result column.
         
-        ExcelUtils.setCellData("Pass", 1, 3);
+        ExcelUtils.setCellData("Pass", 1, 5);
 		
 }
 

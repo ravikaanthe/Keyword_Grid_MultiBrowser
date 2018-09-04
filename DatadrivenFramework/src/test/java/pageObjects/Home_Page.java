@@ -37,6 +37,15 @@ public class Home_Page {
 		 
 		    }
 	 
+	 public static WebElement lnk_fullSearchForm(WebDriver driver){
+		 
+		    element = driver.findElement(By.xpath("//a[contains(text(),'Full Search Form')]"));
+		    Log.info("New Contact link element found");
+		    
+		 return element;
+		 
+		    }
+	 
 	 public static WebElement lnk_logOut(WebDriver driver){
 		 
 		    element = driver.findElement(By.xpath("/html[1]/body[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[1]/td[4]/a[1]"));
@@ -45,5 +54,7 @@ public class Home_Page {
 		 return element;
 		 
 		    }
+	 
+	 
 	 
 }
