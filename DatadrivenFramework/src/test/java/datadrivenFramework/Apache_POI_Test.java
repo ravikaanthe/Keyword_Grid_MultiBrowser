@@ -4,11 +4,9 @@ import utility.ExcelUtils;
 import utility.Log;
 import utility.Constants;
 
-import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -17,32 +15,34 @@ import appModules.NewContact_Action;
 import appModules.SearchContacts_Action;
 import appModules.SignIn_Action;
 import pageObjects.Home_Page;
+import utility.*;
 
 public class Apache_POI_Test {
 	
 	private static WebDriver driver = null;
+	private String sTestCaseName;
+	private int iTestCaseRow;
+	
 	
 	@BeforeMethod
 	
 	public void beforeMethod() throws Exception {
 		
 		DOMConfigurator.configure("log4j.xml");
-		 
-		Log.startTestCase("Selenium_Test_001");
+		
+		sTestCaseName = this.toString();
+		sTestCaseName = Utils.getTestCaseName(this.toString());
+		
+		Log.startTestCase(sTestCaseName);
 		
 		 //This is to open the Excel file. Excel path, file name and the sheet name are parameters to this method
 		 
 		ExcelUtils.setExcelFile(Constants.Path_TestData + Constants.File_TestData, "Sheet1");
 		Log.info(" Excel sheet opened");
 		
-		System.setProperty("webdriver.gecko.driver", "C:\\Selenium Automation\\Software\\geckodriver-v0.21.0-win64\\geckodriver.exe");
-		driver = new FirefoxDriver();	
-		Log.info("New driver instantiated");
-		
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(Constants.URL);
-        Log.info("Web application launched");
-		
+		iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constants.Col_TestCaseName);
+
+		driver = Utils.openBrowser(iTestCaseRow);
 	}
 	
 	

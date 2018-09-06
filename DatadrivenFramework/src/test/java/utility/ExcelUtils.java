@@ -88,6 +88,23 @@ public class ExcelUtils {
 		return iNumber;
 
 		}
+	
+	//Once Test Case name is captured, it can be used as an Argument for a function which will return the Test case row from the Excel sheet
+	public static int getRowContains(String sTestCaseName, int colNum) throws Exception{
+		int i;
+	    try {
+		    int rowCount = ExcelWSheet.getLastRowNum();
+	        for ( i=0 ; i<rowCount; i++){
+		        if  (ExcelUtils.getCellData(i,colNum).equalsIgnoreCase(sTestCaseName)){
+		            break;
+		           }
+		        }
+	        return i;
+	    }catch (Exception e){
+		    Log.error("Class ExcelUtil | Method getRowContains | Exception desc : " + e.getMessage());
+	        throw(e);
+		    }
+	    }
 
 	// This method is to write in the Excel cell, Row num and Col num are the
 	// parameters
