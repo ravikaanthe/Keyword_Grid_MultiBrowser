@@ -11,7 +11,7 @@
       </class> <!-- executionEngine.DriverScriptTest -->
     </classes>
   </test> <!-- Test Node1 chrome(failed) -->
-  <test thread-count="5" name="Test Node2 firecof(failed)">
+  <test thread-count="5" name="Test Node2 firefox(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="executionEngine.DriverScriptTest">
@@ -20,5 +20,5 @@
         </methods>
       </class> <!-- executionEngine.DriverScriptTest -->
     </classes>
-  </test> <!-- Test Node2 firecof(failed) -->
+  </test> <!-- Test Node2 firefox(failed) -->
 </suite> <!-- Failed suite [Test Grid] -->

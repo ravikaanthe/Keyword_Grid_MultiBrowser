@@ -3,9 +3,7 @@ package executionEngine;
 import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.lang.reflect.Method;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.Driver;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -47,7 +45,8 @@ public class DriverScriptTest {
 	public static String sData;
 	public static boolean bResult;
 	public static String nodeUrl;
-	public static WebDriver driver;
+	public static WebDriver driver = null;
+	
 	public static String Path_TestData;
 
 	//Here we are instantiating a new object of class 'ActionKeywords'
@@ -64,7 +63,7 @@ public class DriverScriptTest {
 		if (browserName.equalsIgnoreCase("chrome")) {
 		
 			try {
-				nodeUrl = "http://192.168.0.10:48543/wd/hub";
+				nodeUrl = "http://192.168.0.10:5566/wd/hub";
 				DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 				capabilities.setBrowserName("chrome");
 				capabilities.setPlatform(Platform.WINDOWS);
@@ -74,6 +73,18 @@ public class DriverScriptTest {
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
 				Path_TestData=Constants.Path_TestDataN1C;
+				ExcelUtils.setExcelFile(Path_TestData);
+				DOMConfigurator.configure("log4j.xml");
+				String Path_OR = Constants.Path_OR;
+				//Creating file system object for Object Repository text/property file
+				FileInputStream fs = new FileInputStream(Path_OR);
+				//Creating an Object of properties
+				OR= new Properties(System.getProperties());
+				//Loading all the properties from Object Repository property file in to OR object
+				OR.load(fs);
+				DriverScriptTest startEngine = new DriverScriptTest();
+				startEngine.execute_TestCase();
+				
 			} catch (FactoryConfigurationError e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -84,7 +95,7 @@ public class DriverScriptTest {
 		else if (browserName.equalsIgnoreCase("firefox")) {
 			
 			try {
-				nodeUrl = "http://192.168.0.10:48543/wd/hub";
+				nodeUrl = "http://192.168.0.10:5555/wd/hub";
 				DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 				capabilities.setBrowserName("firefox");
 				capabilities.setPlatform(Platform.WINDOWS);
@@ -95,6 +106,18 @@ public class DriverScriptTest {
 				driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
 				Path_TestData=Constants.Path_TestDataN1F;
 				
+				ExcelUtils.setExcelFile(Path_TestData);
+				DOMConfigurator.configure("log4j.xml");
+				String Path_OR = Constants.Path_OR;
+				//Creating file system object for Object Repository text/property file
+				FileInputStream fs = new FileInputStream(Path_OR);
+				//Creating an Object of properties
+				OR= new Properties(System.getProperties());
+				//Loading all the properties from Object Repository property file in to OR object
+				OR.load(fs);
+				DriverScriptTest startEngine = new DriverScriptTest();
+				startEngine.execute_TestCase();
+				
 			} catch (FactoryConfigurationError e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -102,17 +125,17 @@ public class DriverScriptTest {
 			
 	}
 		
-		ExcelUtils.setExcelFile(Path_TestData);
-		DOMConfigurator.configure("log4j.xml");
-		String Path_OR = Constants.Path_OR;
-		//Creating file system object for Object Repository text/property file
-		FileInputStream fs = new FileInputStream(Path_OR);
-		//Creating an Object of properties
-		OR= new Properties(System.getProperties());
-		//Loading all the properties from Object Repository property file in to OR object
-		OR.load(fs);
-		DriverScriptTest startEngine = new DriverScriptTest();
-		startEngine.execute_TestCase();
+//		ExcelUtils.setExcelFile(Path_TestData);
+//		DOMConfigurator.configure("log4j.xml");
+//		String Path_OR = Constants.Path_OR;
+//		//Creating file system object for Object Repository text/property file
+//		FileInputStream fs = new FileInputStream(Path_OR);
+//		//Creating an Object of properties
+//		OR= new Properties(System.getProperties());
+//		//Loading all the properties from Object Repository property file in to OR object
+//		OR.load(fs);
+//		DriverScriptTest startEngine = new DriverScriptTest();
+//		startEngine.execute_TestCase();
 
     }
     	    	
@@ -142,6 +165,9 @@ public class DriverScriptTest {
 			sRunMode = ExcelUtils.getCellData(iTestcase, Constants.Col_RunMode,Constants.Sheet_TestCases);
 			//This is the condition statement on RunMode value
 			if (sRunMode.equals("Yes")){
+				//Start publishing the report using Extent Reports in HTML file
+				//ExtentTest Class      StartTest method from ExtentReports Class
+				ActionKeywords.logger=ActionKeywords.reports.startTest(sTestCaseID);
 				//Only if the value of Run Mode is 'Yes', this part of code will execute
 				iTestStep = ExcelUtils.getRowContains(sTestCaseID, Constants.Col_TestCaseID, Constants.Sheet_TestSteps);
 				iTestLastStep = ExcelUtils.getTestStepsCount(Constants.Sheet_TestSteps, sTestCaseID, iTestStep);
@@ -169,6 +195,10 @@ public class DriverScriptTest {
 						}
 		    		}
 				
+				//End logging after executing every test case from Test Case sheet using endTest method from ExtentReports class 
+				ActionKeywords.reports.endTest(actionKeywords.logger);
+				ActionKeywords.reports.flush();
+				
 				//This will only execute after the last step of the test case, if value is not 'false' at any step	
 				if(bResult==true){
 				//Storing the result as Pass in the excel sheet
@@ -178,6 +208,7 @@ public class DriverScriptTest {
 			
     			}
     		}
+		//driver.quit();
     }
 	
     
@@ -225,7 +256,9 @@ public class DriverScriptTest {
 					//Once any method is executed, this break statement will take the flow outside of for loop
 					break;
 					}
+				
     		}
+  
     	}
 		}
  }

@@ -9,7 +9,7 @@
 		</classes>
 	</test>
 
-	<test name="Test Node2 firecof">
+	<test name="Test Node2 firefox">
 		<parameter name="browser" value="firefox"/>
 		<classes>
 			<class name="executionEngine.DriverScriptTest">

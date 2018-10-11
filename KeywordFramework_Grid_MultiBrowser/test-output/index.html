@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Test_Grid">
-                    <span>C:\selenium-Frameworks\KeywordFramework\src\test\resources\testng.xml</span>
+                    <span>C:\Users\ravik\selenium-Frameworks\KeywordFramework_Grid_MultiBrowser\src\test\resources\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -134,53 +134,14 @@
                   </a> <!-- Intitialize(chrome) -->
                   <span class="method-name">Intitialize</span>
                   <span class="parameters">(chrome)</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;LAPTOP-Q35KUDM9&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
-	at executionEngine.DriverScriptTest.Intitialize(DriverScriptTest.java:71)
-Caused by: java.net.ConnectException: Failed to connect to /192.168.0.10:3344
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:242)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:160)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:101)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	... 29 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	... 51 more
-... Removed 25 stack frames
+                  <div class="stack-trace">java.lang.reflect.InvocationTargetException
+	at executionEngine.DriverScriptTest.execute_Actions(DriverScriptTest.java:238)
+	at executionEngine.DriverScriptTest.execute_TestCase(DriverScriptTest.java:184)
+	at executionEngine.DriverScriptTest.Intitialize(DriverScriptTest.java:88)
+Caused by: java.lang.NullPointerException
+	at config.ActionKeywords.navigate(ActionKeywords.java:73)
+	... 32 more
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -190,53 +151,14 @@ Caused by: java.net.ConnectException: Connection refused: connect
                   </a> <!-- Intitialize(firefox) -->
                   <span class="method-name">Intitialize</span>
                   <span class="parameters">(firefox)</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;LAPTOP-Q35KUDM9&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
-	at executionEngine.DriverScriptTest.Intitialize(DriverScriptTest.java:91)
-Caused by: java.net.ConnectException: Failed to connect to /192.168.0.10:3344
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:242)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:160)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:101)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	... 29 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
-	... 51 more
-... Removed 25 stack frames
+                  <div class="stack-trace">java.lang.reflect.InvocationTargetException
+	at executionEngine.DriverScriptTest.execute_Actions(DriverScriptTest.java:238)
+	at executionEngine.DriverScriptTest.execute_TestCase(DriverScriptTest.java:184)
+	at executionEngine.DriverScriptTest.Intitialize(DriverScriptTest.java:121)
+Caused by: java.lang.NullPointerException
+	at config.ActionKeywords.navigate(ActionKeywords.java:73)
+	... 32 more
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -245,7 +167,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
         </div> <!-- panel Test_Grid -->
         <div panel-name="test-xml-Test_Grid" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\selenium-Frameworks\KeywordFramework\src\test\resources\testng.xml</span>
+            <span class="header-content">C:\Users\ravik\selenium-Frameworks\KeywordFramework_Grid_MultiBrowser\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -258,12 +180,12 @@ Caused by: java.net.ConnectException: Connection refused: connect
       &lt;class name=&quot;executionEngine.DriverScriptTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Node1 chrome --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test Node2 firecof&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test Node2 firefox&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;executionEngine.DriverScriptTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test Node2 firecof --&gt;
+  &lt;/test&gt; &lt;!-- Test Node2 firefox --&gt;
 &lt;/suite&gt; &lt;!-- Test Grid --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -278,7 +200,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
                 <span class="test-name">Test Node1 chrome (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Test Node2 firecof (1 class)</span>
+                <span class="test-name">Test Node2 firefox (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -308,16 +230,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Intitialize')
 data.setCell(0, 2, 'executionEngine.DriverScriptTest')
-data.setCell(0, 3, 1767);
+data.setCell(0, 3, 16045);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Intitialize')
 data.setCell(1, 2, 'executionEngine.DriverScriptTest')
-data.setCell(1, 3, 1027);
+data.setCell(1, 3, 9931);
 window.suiteTableData['Test_Grid']= { tableData: data, tableDiv: 'times-div-Test_Grid'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Test_Grid">
               </div> <!-- times-div-Test_Grid -->
             </div> <!-- times-div -->
@@ -354,7 +276,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Intitialize(firefox)</span>
-                <span class="method-start">1861 ms</span>
+                <span class="method-start">9998 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

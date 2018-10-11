@@ -11,6 +11,7 @@ public class Constants {
 	public static final String Path_TestDataN1F = "src/test/java/dataEngine/DataEngineN1F.xlsx";
 	public static final String Path_OR = "src/test/java/config/OR.txt";
 	public static final String File_TestData = "DataEngine.xlsx";
+	public static final String Extent_Reports = "src/test/java/Reports/Report.html";
  
 	//List of Data Sheet Column Numbers
 	public static final int Col_TestCaseID = 0;	
