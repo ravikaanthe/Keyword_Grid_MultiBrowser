@@ -1,24 +1,36 @@
 package config;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import static executionEngine.DriverScriptTest.OR;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import executionEngine.DriverScriptTest;
+import executionEngine.MobileDriverScriptTest;
+import freemarker.template.Version;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 import utility.Log;
 
 public class ActionKeywords {
 	
 	public static ExtentReports reports;
 	public static ExtentTest logger;
+	public static WebDriver mdriver;
 	
 	//Constructor to initialize the object of class ExtentReports whenever we initialize object
 			public ActionKeywords(){
@@ -201,6 +213,93 @@ public class ActionKeywords {
 					element, "");
 		}
 	}
+	
+	
+	public static void mverifyElement(String object, String data){
+		try{
+			Log.info("Verifying the element '"+ object);
+			mdriver.findElement(By.xpath(OR.getProperty(object))).isDisplayed();
+			//elementHighlight(mdriver.findElement(By.xpath(OR.getProperty(object))));
+			Thread.sleep(600);
+			logger.log(LogStatus.PASS, "Webelement '"+ object+"'displayed on page");
+		}catch(Exception e){
+			Log.error("Unable to find Webelement --- " + e.getMessage());
+			logger.log(LogStatus.FAIL, "Unable to find Webelement "+ object);
+ 			MobileDriverScriptTest.bResult = false;
+		}
+	}
+	
+	public static void mopenBrowser(String object, String data) throws MalformedURLException{
+		//Create an object of DesiredCapabilities class and specify android platform
+		DesiredCapabilities capabilities=DesiredCapabilities.android();
+		
+		//Set capability to execute test in Chrome Browser of mobile. MobileCapabilityType is an Interface 
+		capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
+		
+		//Set the capability to execute our test in android platform
+		capabilities.setCapability(MobileCapabilityType.PLATFORM, Platform.ANDROID);
+		
+		//Set the Device name as well (you can give any name)
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "My Phone");
+		
+		//Set the Android Version as well
+		capabilities.setCapability(MobileCapabilityType.VERSION, "6.0.1");
+		
+		//Specify object of URL class and specify Appium server address
+		URL url= new URL("http://127.0.0.1:4723/wd/hub");
+		
+		//Create object of Android Driver class and pass the url and capability that we created
+		mdriver=new AndroidDriver(url, capabilities);		
+		
+	}
+	
+	public static void mnavigate(String object, String data){
+		try{
+			Log.info("Navigating to URL "+ "'" + Constants.MURL+"'");
+			mdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			//Constant Variable is used in place of URL
+			//As it was declared as 'static', it can be used by referring the class name
+			//Type the class name 'Constants' and press '.' dot, it will display all the memebers of the class Constants
+			mdriver.get(Constants.MURL);
+			logger.log(LogStatus.PASS, "Navigated to URL - "+ Constants.MURL);
+		}catch(Exception e){
+			Log.info("Not able to navigate --- " + e.getMessage());
+			logger.log(LogStatus.FAIL, "Unable to Navigate to URL - "+ Constants.MURL);
+			MobileDriverScriptTest.bResult = false;
+		}
+			
+	}
+	
+	public static void mclick(String object, String data){
+		try{
+			Log.info("Clicking on Webelement "+ object);
+			mdriver.findElement(By.xpath(OR.getProperty(object))).click();
+			logger.log(LogStatus.PASS, "Succefully Clicked on button "+ object);
+		}catch(Exception e){
+			Log.error("Not able to click --- " + e.getMessage());
+			logger.log(LogStatus.FAIL, "Unable to Click on button "+ object);
+			MobileDriverScriptTest.bResult = false;
+		}
+		
+	}
+	
+	public static void minput(String object, String data){
+		try{
+			Log.info("Entering the text in "+ object);
+			//Constant Variable is used in place of UserName
+			//This is fetching the xpath of the element from the Object Repository property file
+			mdriver.findElement(By.xpath(OR.getProperty(object))).sendKeys(data);
+			mdriver.findElement(By.xpath(OR.getProperty(object))).sendKeys(Keys.TAB);
+			logger.log(LogStatus.PASS, "Entered the text in "+ object);
+		}catch(Exception e){
+			Log.error("Not able to Enter UserName --- " + e.getMessage());
+			MobileDriverScriptTest.bResult = false;
+			logger.log(LogStatus.FAIL, "Not able to enter text in "+ object);
+		}
+		 
+	}
+	
+	
 	
  
 }

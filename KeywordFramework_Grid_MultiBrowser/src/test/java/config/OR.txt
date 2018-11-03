@@ -27,3 +27,12 @@ lnk_LogOut=/html[1]/body[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[
 txtbx_Name=/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[2]/input[1]
 btn_Search=/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[7]/td[2]/input[2]
 tbl_ContactSearch=.//*[@id='vContactsForm']/table/tbody/tr[4]/td[2]
+
+
+# Mobile Automation WebBrowser
+m_btn_Createaccount=//a[@id='signup-button']
+m_txt_Firstname=//*[@id="u_0_0"]/input
+m_txt_Lastname=//*[@id="u_0_1"]/input
+m_btn_Next=//*[@id="mobile-reg-form"]/div[9]/button[1]
+m_btn_next2=//*[@id="mobile-reg-form"]/div[9]/button[1]
+m_lnk_Confirmbirth=//*[@id="u_0_g"]

@@ -114,8 +114,9 @@
             <configuration>
               <useSystemClassLoader>false</useSystemClassLoader>
               <suiteXmlFiles>
-                     <!--suiteXmlFile>src/test/resources/myautomationsuite.xml</suiteXmlFile-->
-                     <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                     <!--<suiteXmlFile>src/test/resources/myautomationsuite.xml</suiteXmlFile-->
+                     <!--<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>-->
+                     <suiteXmlFile>src/test/resources/mobiletestng.xml</suiteXmlFile>
               </suiteXmlFiles>
             </configuration>
         </plugin>

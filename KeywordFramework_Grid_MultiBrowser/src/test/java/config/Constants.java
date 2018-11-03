@@ -7,11 +7,22 @@ public class Constants {
     //Declared as 'final', so that the value of this variable can be changed
     // 'String' & 'int' are the data type for storing a type of value	
 	public static final String URL = "https://www.freecrm.com/index.html";
+	public static final String MURL = "http://www.facebook.com";
 	public static final String Path_TestDataN1C = "src/test/java/dataEngine/DataEngineN1C.xlsx";
 	public static final String Path_TestDataN1F = "src/test/java/dataEngine/DataEngineN1F.xlsx";
 	public static final String Path_OR = "src/test/java/config/OR.txt";
 	public static final String File_TestData = "DataEngine.xlsx";
 	public static final String Extent_Reports = "src/test/java/Reports/Report.html";
+	
+	//Mobile testing data
+	public static final String App_Dir = "src/test/resources";
+	public static final String App_PBazar = "com.policybazaar_2017-04-12.apk";
+	public static final String Path_TestDataPolicy = "src/test/java/dataEngine/DataEngine_Mobile_PolicyApp.xlsx";
+	public static final String File_TestData_Policy= "DataEngine_Mobile_PolicyApp.xlsx";
+	
+	public static final String Path_TestDataMobile = "src/test/java/dataEngine/DataEngine_Mobile.xlsx";
+	public static final String File_TestData_Mobile= "DataEngine_Mobile.xlsx";
+			
  
 	//List of Data Sheet Column Numbers
 	public static final int Col_TestCaseID = 0;	
